@@ -11,7 +11,17 @@
 // 
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program.  If not, see http://www.gnu.org/licenses/.
-// 
+// ****************************************************Control Module*****************************************
+
+ //"DualRadioPCA" is the  Control module, which is utilized for handling messages between upper modules and the two NICs. 
+// The main role of Control module is to organize the exchange of data and WuCs between the two NICs and the upper modules. 
+// This module extends the "BaseLayerDual" module. In addition to the basic gates, we added four new gates. 
+// These are used for sending/receiving WuCs and control messages to/from the WuRNic. 
+// Note that the tasks done in Control module could be implemented either at network or application modules. 
+// We have chosen to implement control message functions in a new module because there is a complexity/rapidity trade-off 
+// between both implementations: significant modifications are required to implement the control at the network layer but in that
+//  case wake-up process will be accelerated and vice versa.
+//**************************************************************************************************************
 
 #include "DualRadioPCA.h"
 #include "BaseLayer.h"
