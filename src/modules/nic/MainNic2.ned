@@ -11,7 +11,13 @@
 // 
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program.  If not, see http://www.gnu.org/licenses/.
-// 
+//*************************************************MainNic*************************************************************
+// MainNic" uses a submodule called "Controller" in addition to "Phy" and "mac" submodules. 
+//   1) "Controller" module is responsible for powering ON/OFF the Main Radio (MR). 
+//   2) It forwards "POWER_ ON" and "POWER_ OFF" control messages, received from "Control" module, in the proper order to lower modules of the "MainNic". 
+//   3) It also ensures that data redirection is only done when the MR is enabled. 
+//"MAC" submodule is responsible for sending data and acknowledgments. 
+//Data sending process can only succeed when physical submodule activates the MR after receiving a "POWER_ON" message.
 
 package org.mixim.modules.nic;
 import org.mixim.modules.nic.WirelessNic;
