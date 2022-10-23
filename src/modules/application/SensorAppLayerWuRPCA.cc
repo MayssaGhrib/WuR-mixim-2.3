@@ -11,7 +11,12 @@
 // 
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program.  If not, see http://www.gnu.org/licenses/.
-// 
+// ******************************************* Application module************************************************
+//The application module "appl" is used for traffic generation. 
+//Each node can generate four types of packets: WUC_MESSAGE_CSMA, WUC_MESSAGE_PCA, DATA_MESSAGE_CSMA, DATA_MESSAGE_PCA.
+//All generated packets are addressed to a common node called the sink node. 
+// Note that some changes were done in the network module in order to ensure the transition of new message types between the “appl” module
+// and modules of the lower layer.
 
 #include "SensorAppLayerWuRPCA.h"
 #include <BaseNetwLayer.h>
