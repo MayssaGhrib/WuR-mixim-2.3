@@ -11,7 +11,15 @@
 // 
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program.  If not, see http://www.gnu.org/licenses/.
-// 
+// *************************************************WuRnic************************************************
+
+// "WuRNic" contains "Phy" and "mac" submodules of WuR. 
+// “MAC” submodule is used to organize the access to the shared medium. Collision avoidance mechanism used to
+handle WuCs is implemented in this module. 
+//After successfully sending a WuC to sink node, a control message is sent to “appl” module in order to begin data transmission
+process.
+
+//**********************************************************************************************************
 
 package org.mixim.modules.nic;
 import org.mixim.modules.nic.WirelessNic;
