@@ -19,6 +19,8 @@
 //"MAC" submodule is responsible for sending data and acknowledgments. 
 //Data sending process can only succeed when physical submodule activates the MR after receiving a "POWER_ON" message.
 
+//*******************************************************************************************************************
+
 package org.mixim.modules.nic;
 import org.mixim.modules.nic.WirelessNic;
 //import org.mixim.modules.phy.PhyLayerBattery;
